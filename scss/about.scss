@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 9, 2015, 2:24:54 PM
+    Author     : Nathan
+*/
+
+@import "_baseline.scss";
+
+
+aside#aside-1 {
+    width: 18%;
+    font-size: 2em;
+    padding: 5px;
+    position: absolute;
+    top: 6%;
+    left: 80px;
+    @include rotate(-7deg);
+}
+
+img#pointer-1 {
+    @include rotateFlipY(-100deg);
+    position: absolute;
+    top: 24%;
+    left: 17%;
+    width: 12%;
+}
+
+aside#aside-2 {
+    width: 20%;
+    position: absolute;
+    top: 3%;
+    right: 16%;
+    @include rotate(10deg);
+}
+
+
+img#pointer-2 {
+    position: absolute;
+    top: 22%;
+    right: 21%;
+    width: 12%;
+    @include rotateFlipY(-80deg);
+}
+
+aside#aside-3 {
+    width: 37%;
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    @include rotate(4deg);
+}
+
+img#pointer-4 {
+    position: absolute;
+    top: -19%;
+    right: 49%;
+    z-index: 100;
+    width: 13%;
+    @include rotateFlipY(3deg);
+}
+
+aside#aside-4 {
+    position: absolute;
+    width: 62%;
+    top: -5%;
+    @include rotate(-2deg);
+    left: 6%;
+}
+
+aside#aside-5 {
+    width: 32%;
+    font-size: 120%;
+    @include rotate(6deg);
+    position: absolute;
+    z-index: 100;
+    top: -20%;
+    right: 14%;
+}
+
+aside#aside-6 {
+    width: 39%;
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    @include rotate(2deg);
+}
+
+img#pointer-5 {
+    position: absolute;
+    top: 1%;
+    left: 70%;
+    @include rotate(20deg);
+}
+
+img#pointer-7 {
+    position: absolute;
+    top: 21%;
+    z-index: 100;
+    left: 14%;
+    @include rotateFlipY(-95deg);
+}
+
+aside#aside-7 {
+    position: absolute;
+    z-index: 100;
+    top: -8%;
+    width: 39%;
+    left: 5%;
+    @include rotate(-4deg);
+}

@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 9, 2015, 2:28:02 PM
+    Author     : Nathan
+*/
+
+@mixin box-shadow ($x, $y, $blur, $spread, $r, $g, $b, $opacity) {
+    -webkit-box-shadow: $x, $y, $blur, $spread, rgba($r, $g, $b, $opacity);
+    -moz-box-shadow:    $x, $y, $blur, $spread, rgba($r, $g, $b, $opacity);
+    box-shadow:         $x, $y, $blur, $spread, rgba($r, $g, $b, $opacity); 
+}
+
+@mixin rotate ($degrees) {
+    -ms-transform: rotate($degrees); /* IE 9 */
+    -webkit-transform: rotate($degrees); /* Chrome, Safari, Opera */
+    transform: rotate($degrees);
+}
+
+@mixin flipY() {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+@mixin rotateFlipY ($degrees) {
+    -moz-transform: rotate($degrees) scaleX(-1);
+    -o-transform: rotate($degrees) scaleX(-1);
+    -webkit-transform: rotate($degrees) scaleX(-1);
+    transform: rotate($degrees) scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}

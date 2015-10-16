@@ -1,0 +1,317 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 2, 2015, 7:50:44 PM
+    Author     : Nathan Guenther
+*/
+
+// Bring in Bootstrap
+/*@import "../bootstrap-sass/assets/stylesheets/bootstrap.scss";*/
+
+// Google Font
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:600,400,700);
+
+//animate scss
+@import "_animate.scss";
+
+/*
+
+Light 300
+Normal 400
+SemiBold 600
+Bold 700
+ExtraBold 800
+
+*/
+
+
+
+
+$lt-green: rgb(95,214,138);
+$md-green: rgb(45,171,102);
+$dk-green: rgb(0,102,51);
+
+$lt-green-background: rgba(95,214,138,.03);
+
+
+
+body {
+
+    & * {
+        font-family: 'Open Sans', sans-serif;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    header {
+        z-index: 100;
+        background: $md-green;
+        height: 95px;
+        width: 100%;
+        position: fixed;
+        border-bottom: 10px solid rgba(250,250,250, .3);
+
+        p#menu-text {
+            position: absolute;
+            top: 16%;
+            right: 4%;
+            font-weight: 600;
+            color: white;
+            width: 30%;
+            border: 3px solid white;
+            text-align: center;
+            font-size: 3em;
+            padding: 7px;
+            border-radius: 65px;
+        }
+
+        a {
+
+            display: block;
+            z-index: 100;
+
+            #logo-container {
+
+                width: 120px;
+                margin:10px;
+                margin-top: 2px;
+                height: 100px;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                #img-logo {
+                    position: absolute;
+                    fill: white;
+                    width: 90%;
+                }  
+            }
+        }
+
+        p#logo-text {
+            color: white;
+            position: absolute;
+            top: 60px;
+            left: 12px;
+            text-align: center;
+            font-size: 100%;
+            font-weight: 600;
+        }
+
+        .nav-ul {
+            padding-top: 25px; 
+            padding-left: 14%;
+            .nav-buttons {
+                list-style: none;
+                background: $lt-green;
+                font-weight: 600;
+                display: inline-block;
+
+                @include border-radius(15px);
+                font-size: 120%;
+                margin-right: 2%;
+                /*border: 1px solid $lt-green;*/
+                @include box-shadow(1px, 1px, 3px, 0px, 50, 50, 50, 0.75);
+                padding: 3px 25px 4px 25px;
+
+                &:hover {
+                    background:white;
+
+                    & * {
+                        color: $md-green;
+                        font-weight: 600;
+                    }
+                }
+
+                & * {
+                    color: white;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    em {
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    strong {
+        font-weight: 600;
+    }
+
+    div.container-fluid {
+        position: relative;
+        z-index: 1;
+        top: 95px;
+
+
+    }
+
+    div#sub-nav {
+        z-index: 10;
+        width: 30px;
+        background: $dk-green;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    h1, h2 {
+        font-family: 'Crimson Text', serif;
+    }
+
+    h1 {
+        font-size: 300%;
+        font-weight: 700;
+        color: $md-green;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 250%;
+        font-weight: 600;
+        color: black;
+        margin-top: 0;
+    }
+
+    p, li {
+        font-size: 170%;
+        font-weight: 300;
+    }
+
+    p {
+        margin-bottom: 25px;
+    }
+
+    a { 
+        text-decoration: $dk-green;
+        color: $dk-green;
+
+        li {
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $dk-green;
+            font-weight: 400;
+        }
+
+        &:hover .icon-social {
+            text-decoration: none;
+        }
+    }
+
+
+    table {
+        th {
+            font-size: 200%;
+        }
+
+        & * {
+            text-align: center;
+        }
+    }
+
+    .row {
+        z-index: 5;
+        padding-top: 75px;
+        padding-bottom: 75px;
+
+        &:nth-of-type(even) {
+            background: $lt-green-background;
+        }
+
+    }
+
+    .list-single-arrow {
+        list-style-image: url('../img/svg/single-arrow.svg');
+    }
+
+
+    .first-row {
+        padding-top: 0;
+    }
+
+
+    .post-it {
+        background: $md-green;
+        @include border-radius(10px);
+        padding: 10px;
+        color: white;
+        text-align: center;
+        font-weight: 400;
+        font-size: 120%;
+
+        a {
+            color: white;
+            font-weight: 700;
+        }
+    }
+
+    .glyphicon {
+        color: $md-green;
+        font-size: 110%;
+        margin-right: 15px;
+    }
+
+    .icon-social {
+        fill: white;
+        background: $md-green;
+        border: 1px solid $md-green;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        @include border-radius(100%);
+
+        &:hover {
+            background:white;
+            fill: $md-green;
+        }
+    }
+
+    .text-normal {
+        font-weight: 400;
+    }
+
+    .side-note {
+        border: 1px solid $dk-green;
+        padding: 15px;
+        @include border-radius(30px);
+        margin-top: 80px;
+
+        p {
+            font-size: 130%;
+            font-weight: 400;
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin:0;
+                padding:0;
+            }
+        }
+
+
+    }
+
+    ol, ul {
+        margin-bottom: 3em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #sub-nav {
+        display: none;
+    }
+}
+
+
+
+@import "_media_query_iPhone6.scss";
